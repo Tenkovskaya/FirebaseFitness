@@ -75,4 +75,7 @@ dependencies {
     implementation(libs.koin.compose)
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+
+    implementation (libs.play.services.auth)
+
 }

@@ -9,4 +9,7 @@ class UserRepositoryImpl(
     override suspend fun register(email: String, password: String): Boolean {
         return firebaseService.register(email, password)
     }
+    override suspend fun login(email: String, password: String): Boolean {
+        return firebaseService.login(email, password)
+    }
 }

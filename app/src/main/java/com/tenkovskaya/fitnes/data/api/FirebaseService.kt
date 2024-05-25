@@ -15,4 +15,13 @@ class FirebaseService {
             false
         }
     }
+
+    suspend fun login(email: String, password: String): Boolean {
+        return try {
+            auth.signInWithEmailAndPassword(email, password).await()
+            true
+        } catch (e: Exception) {
+            false
+        }
+    }
 }

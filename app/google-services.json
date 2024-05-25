@@ -12,7 +12,20 @@
           "package_name": "com.tenkovskaya.fitnes"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "865866042030-govbfpm2md5oft0b1ll2343uh6mbj9sf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tenkovskaya.fitnes",
+            "certificate_hash": "145b6155270dbb10d1e43b4a208ed6778e463ce2"
+          }
+        },
+        {
+          "client_id": "865866042030-q3lmtb2794e195nidl7ee3o4pj4km4t1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBKiMRdevwlf--UzhPqK0OeGEz3Mxin410"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865866042030-q3lmtb2794e195nidl7ee3o4pj4km4t1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

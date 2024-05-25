@@ -12,6 +12,7 @@ import com.tenkovskaya.fitnes.presentation.ui.RegisterScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.tenkovskaya.fitnes.presentation.ui.LoginScreen
 
 
 class MainActivity : ComponentActivity() {
@@ -30,5 +31,6 @@ class MainActivity : ComponentActivity() {
 fun SetupNavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = "register") {
         composable("register") { RegisterScreen(navController) }
+        composable("login"){ LoginScreen(navController)}
     }
 }
