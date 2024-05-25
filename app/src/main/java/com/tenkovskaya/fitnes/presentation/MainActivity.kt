@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
@@ -12,7 +14,10 @@ import com.tenkovskaya.fitnes.presentation.ui.RegisterScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.tenkovskaya.fitnes.presentation.ui.DashboardScreen
 import com.tenkovskaya.fitnes.presentation.ui.LoginScreen
+import kotlinx.coroutines.launch
 
 
 class MainActivity : ComponentActivity() {
@@ -21,6 +26,17 @@ class MainActivity : ComponentActivity() {
         setContent {
             FitnessAppTheme {
                 val navController = rememberNavController()
+                val auth = FirebaseAuth.getInstance()
+                val coroutineScope = rememberCoroutineScope()
+                LaunchedEffect(Unit) {
+                    coroutineScope.launch{
+                        if (auth.currentUser != null){
+                            navController.navigate("dashboard"){
+                                popUpTo(0){inclusive = true}
+                            }
+                        }
+                    }
+                }
                 SetupNavGraph(navController = navController)
             }
         }
@@ -32,5 +48,6 @@ fun SetupNavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = "register") {
         composable("register") { RegisterScreen(navController) }
         composable("login"){ LoginScreen(navController)}
+        composable("dashboard"){ DashboardScreen(navController)}
     }
 }

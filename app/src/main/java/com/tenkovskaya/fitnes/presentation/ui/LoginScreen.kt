@@ -56,7 +56,10 @@ fun LoginScreen(navController: NavController, viewModel: LoginViewModel = getVie
         Button(onClick = {
             viewModel.login(email, password){success->
                 if (success){
-                    navController.navigate(("dashboard"))
+                    navController.navigate("dashboard") {
+                        popUpTo("login") { inclusive = true }
+                        popUpTo("register") { inclusive = true }
+                    }
                 }else{
                     Toast.makeText(context, "Login failed", Toast.LENGTH_SHORT).show()
                 }
