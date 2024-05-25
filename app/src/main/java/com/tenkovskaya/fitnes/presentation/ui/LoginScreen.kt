@@ -72,5 +72,4 @@ fun LoginScreen(navController: NavController, viewModel: LoginViewModel = getVie
             Text("Don't have an account? Register")
         }
     }
-
 }
