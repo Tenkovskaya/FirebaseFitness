@@ -8,15 +8,13 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.rememberNavController
-import com.tenkovskaya.fitnes.presentation.theme.FitnessAppTheme
-import com.tenkovskaya.fitnes.presentation.ui.RegisterScreen
-import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.firebase.auth.FirebaseAuth
+import com.tenkovskaya.fitnes.presentation.theme.FitnessAppTheme
 import com.tenkovskaya.fitnes.presentation.ui.DashboardScreen
 import com.tenkovskaya.fitnes.presentation.ui.LoginScreen
+import com.tenkovskaya.fitnes.presentation.ui.RegisterScreen
 import kotlinx.coroutines.launch
 
 
