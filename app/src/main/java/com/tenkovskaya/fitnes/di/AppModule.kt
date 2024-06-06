@@ -5,6 +5,7 @@ import com.tenkovskaya.fitnes.data.repository.UserRepositoryImpl
 import com.tenkovskaya.fitnes.domain.repository.UserRepository
 import com.tenkovskaya.fitnes.domain.usecase.LoginUseCase
 import com.tenkovskaya.fitnes.domain.usecase.RegisterUseCase
+import com.tenkovskaya.fitnes.presentation.viewmodel.DashboardViewModel
 import com.tenkovskaya.fitnes.presentation.viewmodel.LoginViewModel
 import com.tenkovskaya.fitnes.presentation.viewmodel.RegisterViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -17,4 +18,5 @@ val appModule = module {
     factory { LoginUseCase(get()) }
     viewModel { RegisterViewModel(get()) }
     viewModel{LoginViewModel(get())}
+    viewModel{DashboardViewModel()}
 }
