@@ -4,7 +4,6 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.tasks.await
 
 class FirebaseService {
-
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     suspend fun register(email: String, password: String): Boolean {
