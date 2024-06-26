@@ -1,6 +1,5 @@
 package com.tenkovskaya.fitnes.presentation.ui
 
-import android.icu.text.CaseMap.Title
 import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
