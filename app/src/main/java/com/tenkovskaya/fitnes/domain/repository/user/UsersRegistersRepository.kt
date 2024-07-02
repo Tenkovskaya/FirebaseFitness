@@ -1,4 +1,4 @@
-package com.tenkovskaya.fitnes.domain.repository
+package com.tenkovskaya.fitnes.domain.repository.user
 
 interface UsersRegistersRepository {
     suspend fun register(email: String, password: String): Boolean

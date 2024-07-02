@@ -1,4 +1,4 @@
-package com.tenkovskaya.fitnes.data.database
+package com.tenkovskaya.fitnes.data.database.workout
 
 import android.util.Log
 import com.google.firebase.database.DataSnapshot

@@ -1,7 +1,7 @@
-package com.tenkovskaya.fitnes.data.repository
+package com.tenkovskaya.fitnes.data.repository.user
 
 import com.tenkovskaya.fitnes.data.api.FirebaseService
-import com.tenkovskaya.fitnes.domain.repository.UsersRegistersRepository
+import com.tenkovskaya.fitnes.domain.repository.user.UsersRegistersRepository
 
 class UserRegistersRepositoryImpl(
     private val firebaseService: FirebaseService

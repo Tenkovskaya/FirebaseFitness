@@ -1,7 +1,7 @@
-package com.tenkovskaya.fitnes.data.repository
+package com.tenkovskaya.fitnes.data.repository.user
 
-import com.tenkovskaya.fitnes.data.database.UserInfo
-import com.tenkovskaya.fitnes.data.database.UserInfoDao
+import com.tenkovskaya.fitnes.data.database.user.UserInfo
+import com.tenkovskaya.fitnes.data.database.user.UserInfoDao
 
 class UserInfoRepository(private val userInfoDao: UserInfoDao) {
     suspend fun insert(userInfo: UserInfo) {
