@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -16,6 +15,7 @@ import com.tenkovskaya.fitnes.presentation.theme.FitnessAppTheme
 import com.tenkovskaya.fitnes.presentation.ui.DashboardScreen
 import com.tenkovskaya.fitnes.presentation.ui.LoginScreen
 import com.tenkovskaya.fitnes.presentation.ui.RegisterScreen
+import com.tenkovskaya.fitnes.presentation.ui.UserScreen
 import com.tenkovskaya.fitnes.presentation.viewmodel.DashboardViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
@@ -57,6 +57,9 @@ fun SetupNavGraph(navController: NavHostController) {
                 userName = dashboardViewModel.userName,
                 workouts = dashboardViewModel.workouts
             )
+        }
+        composable("user") {
+            UserScreen(navController)
         }
     }
 }

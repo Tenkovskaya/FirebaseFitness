@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    id("androidx.room")
+    id("kotlin-kapt")
 }
 
 android {
@@ -20,7 +22,9 @@ android {
             useSupportLibrary = true
         }
     }
-
+    room {
+        schemaDirectory("$projectDir/schemas")
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -48,7 +52,12 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
 }
+//
+//ksp {
+//    arg("room.incremental", "true")
+//}
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -79,5 +88,9 @@ dependencies {
     implementation (libs.coil.compose)
     implementation (libs.play.services.auth)
     implementation (libs.firebase.database.ktx)
-
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation (libs.androidx.room.ktx)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    kapt ("androidx.room:room-compiler:2.6.1")
 }

@@ -1,9 +1,9 @@
 package com.tenkovskaya.fitnes.domain.usecase
 
-import com.tenkovskaya.fitnes.domain.repository.UserRepository
+import com.tenkovskaya.fitnes.domain.repository.UsersRegistersRepository
 
-class RegisterUseCase(private val userRepository: UserRepository) {
+class RegisterUseCase(private val usersRegistersRepository: UsersRegistersRepository) {
     suspend operator fun invoke(email: String, password: String): Boolean {
-        return userRepository.register(email, password)
+        return usersRegistersRepository.register(email, password)
     }
 }
