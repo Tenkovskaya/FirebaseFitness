@@ -2,6 +2,7 @@ package com.tenkovskaya.fitnes.presentation
 
 import android.app.Application
 import com.google.firebase.FirebaseApp
+import com.tenkovskaya.fitnes.di.appModuleDatabase
 import com.tenkovskaya.fitnes.di.appModuleFactory
 import com.tenkovskaya.fitnes.di.appModuleSingle
 import com.tenkovskaya.fitnes.di.appModuleViewModel
@@ -15,7 +16,7 @@ class MainApplication : Application() {
 
         startKoin {
             androidContext(this@MainApplication)
-            modules(appModuleSingle, appModuleFactory, appModuleViewModel)
+            modules(appModuleSingle, appModuleFactory, appModuleViewModel, appModuleDatabase)
         }
     }
 }

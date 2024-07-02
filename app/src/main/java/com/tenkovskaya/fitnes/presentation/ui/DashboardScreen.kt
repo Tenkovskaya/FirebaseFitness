@@ -2,6 +2,7 @@ package com.tenkovskaya.fitnes.presentation.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -45,7 +46,10 @@ fun DashboardScreen(navController: NavController, userAvatarUrl: String, userNam
             modifier = Modifier
                 .size(100.dp)
                 .clip(CircleShape)
-                .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape),
+                .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
+                .clickable {
+                    navController.navigate("user")
+                },
             contentScale = ContentScale.Crop
         )
 
