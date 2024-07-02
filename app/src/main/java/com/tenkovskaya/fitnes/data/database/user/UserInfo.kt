@@ -1,4 +1,4 @@
-package com.tenkovskaya.fitnes.data.database
+package com.tenkovskaya.fitnes.data.database.user
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,15 +1,14 @@
 package com.tenkovskaya.fitnes.di
 
 import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.tenkovskaya.fitnes.data.api.FirebaseService
-import com.tenkovskaya.fitnes.data.database.WorkoutDataSource
-import com.tenkovskaya.fitnes.data.database.WorkoutDataSourceImpl
-import com.tenkovskaya.fitnes.data.repository.UserInfoRepository
-import com.tenkovskaya.fitnes.data.repository.UserRegistersRepositoryImpl
-import com.tenkovskaya.fitnes.data.repository.WorkoutRepositoryImpl
-import com.tenkovskaya.fitnes.domain.repository.UsersRegistersRepository
-import com.tenkovskaya.fitnes.domain.repository.WorkoutRepository
+import com.tenkovskaya.fitnes.data.database.workout.WorkoutDataSource
+import com.tenkovskaya.fitnes.data.database.workout.WorkoutDataSourceImpl
+import com.tenkovskaya.fitnes.data.repository.user.UserInfoRepository
+import com.tenkovskaya.fitnes.data.repository.user.UserRegistersRepositoryImpl
+import com.tenkovskaya.fitnes.data.repository.workout.WorkoutRepositoryImpl
+import com.tenkovskaya.fitnes.domain.repository.user.UsersRegistersRepository
+import com.tenkovskaya.fitnes.domain.repository.workout.WorkoutRepository
 import com.tenkovskaya.fitnes.domain.usecase.LoginUseCase
 import com.tenkovskaya.fitnes.domain.usecase.RegisterUseCase
 import com.tenkovskaya.fitnes.presentation.viewmodel.DashboardViewModel

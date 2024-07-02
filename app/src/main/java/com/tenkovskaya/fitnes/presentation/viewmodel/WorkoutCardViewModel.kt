@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.tenkovskaya.fitnes.domain.repository.WorkoutRepository
+import com.tenkovskaya.fitnes.domain.repository.workout.WorkoutRepository
 import kotlinx.coroutines.launch
 
 class WorkoutCardViewModel(private val repository: WorkoutRepository) : ViewModel() {

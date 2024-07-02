@@ -8,7 +8,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.navigation.NavController
-import com.tenkovskaya.fitnes.data.database.UserInfo
+import com.tenkovskaya.fitnes.data.database.user.UserInfo
 import com.tenkovskaya.fitnes.presentation.viewmodel.UserViewModel
 import org.koin.androidx.compose.koinViewModel
 

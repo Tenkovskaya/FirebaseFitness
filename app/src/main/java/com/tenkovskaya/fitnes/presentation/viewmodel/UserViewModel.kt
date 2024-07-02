@@ -2,8 +2,8 @@ package com.tenkovskaya.fitnes.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.tenkovskaya.fitnes.data.database.UserInfo
-import com.tenkovskaya.fitnes.data.repository.UserInfoRepository
+import com.tenkovskaya.fitnes.data.database.user.UserInfo
+import com.tenkovskaya.fitnes.data.repository.user.UserInfoRepository
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
