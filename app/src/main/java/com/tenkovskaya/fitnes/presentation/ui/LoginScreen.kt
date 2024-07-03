@@ -30,7 +30,7 @@ import org.koin.androidx.compose.getViewModel
 fun LoginScreen(navController: NavController, viewModel: LoginViewModel = getViewModel()){
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
-    var context = LocalContext.current
+    val context = LocalContext.current
 
     Column (
         modifier = Modifier

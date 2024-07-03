@@ -17,6 +17,7 @@ import com.tenkovskaya.fitnes.presentation.ui.LoginScreen
 import com.tenkovskaya.fitnes.presentation.ui.RegisterScreen
 import com.tenkovskaya.fitnes.presentation.ui.UserScreen
 import com.tenkovskaya.fitnes.presentation.viewmodel.DashboardViewModel
+import com.tenkovskaya.fitnes.presentation.viewmodel.UserViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 
@@ -59,7 +60,11 @@ fun SetupNavGraph(navController: NavHostController) {
             )
         }
         composable("user") {
-            UserScreen(navController)
+            val userViewModel: UserViewModel = koinViewModel()
+
+            UserScreen(navController,
+                userAvatarUrl = userViewModel.userAvatarUrl,
+                )
         }
     }
 }

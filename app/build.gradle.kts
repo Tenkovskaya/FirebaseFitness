@@ -54,10 +54,7 @@ android {
     }
 
 }
-//
-//ksp {
-//    arg("room.incremental", "true")
-//}
+
 
 dependencies {
     implementation(libs.androidx.core.ktx)
