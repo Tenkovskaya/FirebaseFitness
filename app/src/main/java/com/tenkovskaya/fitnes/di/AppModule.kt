@@ -46,6 +46,7 @@ val appModuleViewModel = module {
 val appModuleDatabase = module {
     single<AppDatabase> {
         Room.databaseBuilder(get(), AppDatabase::class.java, "app_database")
+//            .addMigrations(MIGRATION_1_2)
             .fallbackToDestructiveMigration()
             .build()
     }
