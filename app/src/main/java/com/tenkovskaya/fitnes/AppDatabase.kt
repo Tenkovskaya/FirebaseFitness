@@ -1,4 +1,4 @@
-package com.tenkovskaya.fitnes.di
+package com.tenkovskaya.fitnes
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

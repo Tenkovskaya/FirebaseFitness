@@ -1,6 +1,7 @@
 package com.tenkovskaya.fitnes.di
 
 import androidx.room.Room
+import com.tenkovskaya.fitnes.AppDatabase
 import com.tenkovskaya.fitnes.data.api.FirebaseService
 import com.tenkovskaya.fitnes.data.database.workout.WorkoutDataSource
 import com.tenkovskaya.fitnes.data.database.workout.WorkoutDataSourceImpl
